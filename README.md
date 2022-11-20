@@ -7,7 +7,6 @@ This repository is structured in four main sections:
 - **Requirements**: where the system specifications and their validation procedures are defined.
 - **Documentation**: where all the different documentation files concerning the project and their respective versions are managed.
 - **MATLAB System Composer Model**: where the system's model for its characterization from different perspectives is included.
-- **Software**: where the all the different software packages which are necessary for the simulation are included.
+- **Software**: where all the software implemented by Hell-ix group for the ADR competition is included.
 
 The architecture is documented in MATLAB System Composer.
-
