@@ -40,4 +40,14 @@ This repository contains all simulation files needed to simulate the Crazyflie 2
     roslaunch rotors_gazebo crazyflie2_hovering_example.launch
     ```
 
-## 
+## Next steps
+
+Once inside the container, the usage is exactly the same as if working in a terminal. The /home/user folder is shared with the host computer, so changes there will be permanent. Changes in other folders will not persist when docker is closed ```ctrl+D```. 
+
+Installed programmes will not persist either. In order to install a program inside the container, the best procedure is to add the installation to the Dockerfile and rebuild the image (Step 2). For example, if you need to use ```neofetch```, add the following line at the end of the Dockerfile:
+
+```Dockerfile
+RUN apt-get install neofetch -y
+```
+
+Development should be performed inside the /home/user folder, creating a workspace as explained here: https://industrial-training-master.readthedocs.io/en/melodic/_source/session1/Create-Catkin-Workspace.html. Once a package is completed, it can be uploaded to the repository, and then it should be included in the Dockerfile so that everyone can install it in their container.

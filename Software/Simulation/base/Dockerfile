@@ -41,3 +41,4 @@ WORKDIR /home/ros/python-uinput
 RUN python3 -m pip install pygame
 RUN python3 setup.py build && python3 setup.py install
 
+RUN apt-get install neofetch -y
