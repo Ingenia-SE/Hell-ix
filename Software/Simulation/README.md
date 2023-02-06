@@ -16,21 +16,28 @@ This repository contains all simulation files needed to simulate the Crazyflie 2
     gh repo clone Ingenia-SE/Hell-ix
     cd Hell-ix/software/simulation/base
     ```
+2. Create a volume to hold the installation. All installation related files should be found in ```/home/ros```.
 
-2. Build the image:
+    ```bash
+    docker volume create ros-noetic-volume
+    ```
+
+3. Build the image:
 
     ```bash
     docker build -t crazy_noetic .
     ```
 
-3. Open ~/.bashrc or ~/.zshrc and add the following line at the end. In the case of not using an Nvidia, remove ```--gpus all``` as well as ```--env="NVIDIA_DRIVER_CAPABILITIES=all"```.
+4. Open ~/.bashrc or ~/.zshrc and add the following line at the end. In the case of not using an Nvidia, remove ```--gpus all``` as well as ```--env="NVIDIA_DRIVER_CAPABILITIES=all"```.
 
     ```bash
     alias crazy-noetic='xhost + && docker run -it --rm --cap-add=ALL --privileged --net=host --gpus all --env="NVIDIA_DRIVER_CAPABILITIES=all" --env="DISPLAY" --env="QT_X11_NO_MITSHM=1" --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --volume="/home/$USER:/home/$USER" --volume="/lib/modules:/lib/modules" --workdir="/home/$USER" crazy_noetic'
     ```
 
-4. Now open a terminal and type ```crazy-noetic```. The container should open without errors. To test the installation, run the following line. If everything is OK, gazebo will open and the drone will appear flying:
+5. Now open a terminal and type ```crazy-noetic```. The container should open without errors. To test the installation, run the following line. If everything is OK, gazebo will open and the drone will appear flying:
    
    ```bash
     roslaunch rotors_gazebo crazyflie2_hovering_example.launch
     ```
+
+## 
