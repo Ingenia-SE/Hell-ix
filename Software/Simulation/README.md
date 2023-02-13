@@ -16,11 +16,12 @@ This repository contains all simulation files needed to simulate the Crazyflie 2
     gh repo clone Ingenia-SE/Hell-ix
     cd Hell-ix/software/simulation/base
     ```
-2. Create a volume to hold the installation. All installation related files should be found in ```/home/ros```.
+2. Create a volume to hold the installation. All installation related files should be found in ```/home/ros```. In case you have problems with docker administrator permissions, follow the steps in the following link to run the docker program without using the ```sudo``` command before each docker statement. (https://www.enmimaquinafunciona.com/pregunta/171405/es-posible-utilizar-docker-sin-sudo)
 
     ```bash
     docker volume create ros-noetic-volume
     ```
+   
 
 3. Build the image:
 
