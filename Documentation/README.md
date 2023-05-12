@@ -1,4 +1,2 @@
 # Documentation
-Here it is located all the documentation of the group Hell-ix concerning the INGENIA-SE ADR Challenge 2022-2023.
-
-The pdf documents can be opened with a pdf viewer like "Adobe Reader".
+Here it is located all the documentation of the group Hell-ix concerning the INGENIA-SE ADR Challenge 2022-2023. The pdf documents can be opened with a pdf viewer like "Adobe Reader". Folder **Final Documentation** contains the final deliverables for the INGENIA-SE 2022-2023 and folder **Project Reviews** contains the presentations used in the project reviews that have been carried out.
