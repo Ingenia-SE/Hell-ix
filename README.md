@@ -2,11 +2,11 @@
 
 # Hell-ix Project
 
-This GitHub repository is home to the **Autonomous Drone Racing Challenge 2022-2023**, a project in progress by Hell-ix and Droning teams. In particular, this repository includes the work done by Hell-ix team. The aim of the project is to organize an Autonomous Drone Racing (ADR) competition between two drones (each one managed by one team). The competition is based on three main tests: a straight-line speed race through four gates, a race through four gates forming a semicircle, and a freestyle test. The objetive is to win the competition by performing the best as possible. [Click here](https://ingenia-se.github.io/Hell-ix/) to go there!
+This GitHub repository is home to the **Autonomous Drone Racing Challenge 2022-2023**, a project in progress by Hell-ix and Droning teams. In particular, this repository includes the work done by Hell-ix team. The aim of the project is to organize an Autonomous Drone Racing (ADR) competition between two drones (each one managed by one team). The competition is based on three main tests: a straight-line speed race through four gates, a race through four gates forming a semicircle, and a freestyle test. The objetive is to win the competition by performing the best as possible.
 
 ## Project overview & Installation guide
 
-The general information of the project, its installation steps and its simulation guide can be found at the project's github.io page.
+The general information of the project, its installation steps and its simulation guide can be found at the project's github.io page. [Click here](https://ingenia-se.github.io/Hell-ix/) to go there!
 
 ## Repository Contents
 This information will be updated once new information is available.
