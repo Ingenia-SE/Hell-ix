@@ -1,4 +1,4 @@
-<img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/logo_background.png?raw=true" alt="Hell-ix-Logo" width="210">
+<img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/logo_background.png" alt="" width="210">
 
 # Hell-ix Project
 
