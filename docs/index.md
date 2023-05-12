@@ -9,6 +9,12 @@ The ADR Challenge is a competition that will be held as a result of the INGENIA-
 
 ## Features
 
+### Race Trajectory Planner
+
+### Computer Vision
+
+### Drone Racing Competition Simulation Environment
+  
   
 ## Installation
 
