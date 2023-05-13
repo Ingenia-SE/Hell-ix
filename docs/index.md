@@ -8,6 +8,8 @@ This GitHub repository is home to the **Autonomous Drone Racing Challenge 2022-2
 The ADR Challenge is a competition that will be held as a result of the INGENIA-SE 2022-2023. The competition will face two teams: **Hell-ix** and Droning. The competition will consist of **three main tests**: a straight-line speed race through four gates, a race through four gates forming a semicircle, and a freestyle test. 
 
 ## Features
+The project has three main modules aimed at achieving autonomous operation of the drone.
+
 
 ### Race Trajectory Planner
 
