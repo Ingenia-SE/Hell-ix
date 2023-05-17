@@ -13,7 +13,7 @@ assignees: ''
 |---------:|---------|----------:|--------|
 | **Requestor:** | Requestor's name | **Date:** | dd/mm/aaaa |
 | **Project Managers:** | Sergio Andrés Remacha / Daniel Sotelo | **Priority:** | Priority level |
-| **Configuration Managers:** | Alonso Alameda / María Teresa Rodríguez | **CI Target:** | Target |
+| **Configuration Managers:** | Alberto Suárez / María Teresa Rodríguez | **CI Target:** | Target |
 <!--- More rows can be added in the table, if necessary
 A priority level can be arbitrarily set by the requestor. It can be Low, Medium or High.
 The CI target refers to the CI it will affect. If it's more, introduce Multiple. -->
