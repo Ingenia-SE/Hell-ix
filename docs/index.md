@@ -14,12 +14,7 @@ The project has three main modules aimed at achieving autonomous operation of th
 ### Race Trajectory Planner
 The first main module consist on a program which generates a .csv file that contains the 3D coordinates of the best possible flight path for the drone to navigate through a series of designated gates. By defining specific center points for the drone to pass through and providing additional parameters such as gate orientations, the program calculates the most efficient trajectory. Furthermore, the trajectory can be optimized based on the drone's power-to-weight ratio, which determines how sharply it can maneuver around corners. This optimization is achieved by adjusting the "tension" at each gate. The program also provides a visual representation where the obstacles, arranged in the order the drone will encounter them, are displayed alongside the optimized flight path. Users have complete flexibility to configure the obstacles, including the ability to modify their number, positions, orientations, and sizes.
 
-The program is formed by three different files:
-- The main program, **trajectory_planner.m**, is responsible for generating the optimal trajectory and creating a .csv file. It utilizes various algorithms and functions to determine the best flight path for the drone to navigate through the gates.
-- One of the essential functions used in the program is **hobbysplines.m**. Originally developed by Will Robertson and the University of Adelaide, this function has been slightly modified for this particular application. It leverages Hobby's algorithm, which takes into account curvature and tension, to select control points for drawing 3D Bezier curves. By employing this method, smooth and visually pleasing trajectories can be achieved.
-- Another useful function is **plotGate.m**. This function serves the purpose of visualizing gates on a plot based on their positions and orientations. It enables the program to display the gates in a clear and understandable manner, allowing users to see the arrangement of gates along with the optimized trajectory.
-
-Overall, the combination of the main program, **trajectory_planner.m**, the modified **hobbysplines.m** function, and the **plotGate.m** function provides a comprehensive solution for generating optimal trajectories, drawing smooth 3D Bezier curves, and visualizing the gates, resulting in an effective and user-friendly program for drone navigation.
+The program consists of three files. The main program, **"trajectory_planner.m"**, generates an optimal trajectory and creates a .csv file. It utilizes various algorithms and functions, including the modified **"hobbysplines.m"** function, which employs Hobby's algorithm to select control points for smooth 3D Bezier curves. Additionally, it utilizes the **"plotGate.m"** function which visualizes the gates' positions and orientations, providing a clear representation of the gate arrangement along with the optimized trajectory.Overall, the combination of the main program, trajectory_planner.m, the modified hobbysplines.m function, and the plotGate.m function provides a comprehensive solution for generating optimal trajectories, drawing smooth 3D Bezier curves, and visualizing the gates, resulting in an effective and user-friendly program for drone navigation.
 
 <details>
   <summary>Images</summary>
@@ -65,7 +60,26 @@ The Crazyflie 2.1 undergoes extensive testing during production, but it's recomm
 To perform the power-on self-test, connect the Crazyflie 2.1 to a USB power source. The test result is indicated by the LEDs M1 and M4. If the M4 LED blinks green five times rapidly, it means the test has passed.
 In case the self-test fails, the M1 LED will blink red five times rapidly, followed by a pause and repetition. In such a situation, it is recommended to seek help by visiting the support discussions provided by the manufacturer.
 
-<b>Note:The Crazyflie 2.1 has four LEDs labeled M1, M2, M3, and M4, which correspond to each of the four motors. These LEDs provide visual feedback on the status and operation of the respective motors during flight or testing. They help users monitor the individual motor status and detect any potential issues or abnormalities.</b>
+<b>Note</b> :The Crazyflie 2.1 has four LEDs, each serving a specific purpose:
+
+- **M1: The front right LED (1)**
+
+  - Power on and all is good: Blinks red twice every second.
+  - Power on, but sensors are not yet calibrated: Blinks red with a 2-second interval. Calibrate the sensors by placing the Crazyflie 2.X on a level surface and keeping it still.
+  - Battery low: Fully lit in red. Indicates that it's time to land and recharge the battery.
+  - Self-test fail: Repeatedly blinks five short red pulses with a longer pause between groups.
+- **M2 and M3: Blue LEDs (2 and 3) at the back**
+
+  - Power on and all is good: Fully lit.
+  - Power on, but sensors are not yet calibrated: Fully lit.
+  - Charging: M3 (back left LED) blinks, while M2 (right back LED) is lit.
+  - Boot loader mode: Blink approximately once every second.
+- **M4: The front left LED (4)**
+
+  -Radio connected: Flickers in red and/or green.
+  
+These LED indicators provide valuable information about the status of the Crazyflie 2.1 drone, including power, sensor calibration, battery level, charging, boot loader mode, radio connection, and self-test results.
+
 
 <details>
   <summary>Crazyflie Leds Images</summary>
@@ -113,7 +127,7 @@ The assembly process of the Crazyflie 2.1 can typically be completed in under 10
 
 - **Battery Attachment**: Position the battery between the headers inserted into the expansion connector. Proceed to insert the battery holder board onto the headers, taking care with the sharp pins during insertion. The friction provided by the connections should securely hold the battery in place. Tighten it until it remains firmly fixed.
 
-- **Battery Connection**: Connect the battery to finalize the assembly process. It is advisable to bend the battery wires and position them underneath the PCB to ensure they are out of the way.
+- **Battery Connection**: Connect the battery to finalize the assembly process. It is advisable to bend the battery wires and position them underneath the PCB to ensure they are out of the way. <b>Note</b>: To recharge the battery of the Crazyflie 2.1, simply connect a micro USB cable. Ensure that the Crazyflie is turned on. During the charging process, the back left blue LED will blink. Once the LED remains fully illuminated, it indicates that the battery is fully charged.
 
 <details>
   <summary>Battery Images</summary>
@@ -152,6 +166,78 @@ By meticulously following these instructions, you have successfully completed th
 </details>
 
 ### Software setup
+To control the flight of the Crazyflie, you have the option to use either a mobile device or a computer. Using a mobile device provides a quick setup, although it may require more piloting skills. On the other hand, if you prefer more options and greater control, you can utilize a computer along with a Crazyradio 2.0 or Crazyradio PA and a gamepad.
+
+However, in the case of the team, it has been chosen a different approach. Instead of using a gamepad,  the movement of the Crazyflie is controlled by programming and executing trajectories within the Python IDE using the CFClient.
+
+The CFClient is a software tool that serves as a graphical interface for interacting with the Crazyflie. It allows to monitor and control various aspects of the drone's flight parameters, sensor data, and behavior. Additionally, you can establish a connection between the CFClient and the Crazyflie by utilizing the Crazyradio 2.0 or Crazyradio PA for wireless communication.
+Software setup steps:
+
+- **Install the CFClient**: Begin by installing the CFClient software on your computer. This software serves as the interface for controlling the Crazyflie.
+
+- **Connect the Crazyradio**: Plug in the Crazyradio 2.0 or Crazyradio PA into a USB port on your computer. This radio module facilitates communication between the CFClient and the Crazyflie.
+
+<details>
+  <summary> Crazyradio 2.0 configuration </summary>
+  
+- The first thing to do is to assemble the hardware, which contains the Antenna and the Crazyradio 2.0 USB dongle. 
+  
+- Continue setting the antenna on to the connector on the USB dongle.
+  
+- To flash new firmware to the Crazyradio 2.0 , it must first be set to the bootloader mode.
+  
+- Press and hold the button.
+  
+- Insert the USB dongle into a USB port while holding the button.
+  
+- Verify that the LED is pulsating with a red light, this indicates that the Crazyradio 2.0  is in bootloader mode.
+  
+- When in bootloader mode, the Crazyradio 2.0  will appear as a USB drive in your operating system. Firmware is installed by copying a .uf2 firmware file to the drive.
+  
+- Open a file browser and find the drive named Crazyradio2.
+  
+- Go to the release page on github. Download the file named crazyradio2-CRPA-emulation-[version].uf2 by clicking it.
+  
+- In your file browser, drag and drop the downloaded file to the Crazyradio2 drive.
+  
+- The installation takes less than a second and when done, the Crazyradio 2.0  will restart running the new firmware. Since it is no longer in bootloader mode, the USB drive will no longer be available.
+
+When the Crayradio PA emulation firmware starts up, the LED will light up briefly in white. If you missed it when flashing, unplug and re-plug the Crazyradio 2.0  to restart it.The Crazyradio 2.0 will be nowready to use and it will behave like a Crazyradio PA, which means it will be compatible with all the products in the Crazyflie ecosystem.
+
+<b>Note</b>: Depending on which operating system you use, you will have to install drivers or do some configuration to communicate with the Crazyradio 2.0. 
+  <details>
+    <summary>Drivers installation</summary>
+To install the necessary drivers for the Bitcraze device, follow these steps:
+
+- Download Zadig: Visit the website http://zadig.akeo.ie/ and download the Zadig software.
+
+- Connect the Bitcraze device to your PC: Plug in the Bitcraze device, and Windows will display an installation window. Note that on Windows 8 and 10, the window may close automatically without any action. On Windows 7, you need to close the "install failed" window.
+
+- Launch Zadig: Open the Zadig software. You should see a list of devices available.
+
+- Select the Device and Driver: Locate your Bitcraze device in the list and select it. Choose "libusb" as the driver option.
+
+- Install the Driver: Click the "Install" button to begin the driver installation process.
+
+- Wait for Installation: The installation process will run, and it should complete successfully. The duration of the installation can vary, ranging from quick to a few minutes.
+
+By following these steps, you can download Zadig, connect the Bitcraze device, and install the required drivers for proper functionality.
+  </details>
+</details>
+
+- **Launch the CFClient**: Open the CFClient software on your computer. This will provide you with access to various control and configuration options for the Crazyflie.
+
+- **Establish Radio Connection**: Within the CFClient, locate the option to establish a radio connection. This process establishes a wireless link between the CFClient and the Crazyflie through the Crazyradio.
+
+- **Select Crazyflie Device**: After establishing the radio connection, the CFClient will display a list of available Crazyflie devices. Choose the desired Crazyflie from the list to establish a connection with that specific device.
+
+- **Configure Settings**: Once connected, you can configure various settings within the CFClient to customize the behavior and performance of the Crazyflie. These settings may include flight parameters, control mappings, and sensor calibration.
+
+- **Monitor and Control**: With the CFClient and Crazyradio successfully connected to the Crazyflie, you can monitor real-time telemetry data, such as flight status, battery levels, and signal quality. Use the CFClient interface to control the Crazyflie's movement and perform maneuvers according to your requirements.
+
+- **Firmware Updates**: It is crucial to keep the Crazyflie's firmware up to date to access the latest features and improvements. The CFClient provides options to update the firmware, ensuring compatibility and optimal performance.
+
+By following these technical and formal steps, users can effectively utilize the CFClient and the Crazyradio 2.0 or Crazyradio PA to control and manage the Crazyflie's flight operations.
 
 ## Simulation Guide
 
