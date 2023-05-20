@@ -28,7 +28,7 @@ Overall, the combination of the main program, **trajectory_planner.m**, the modi
   </p>
   <p align="center">Four gates trayectory planner </p>
 </details>
-<br>
+
 
 
 
@@ -42,6 +42,7 @@ Overall, the combination of the main program, **trajectory_planner.m**, the modi
 
 ## Setup Guide
 
+Once the Crazyflie 2.1 box is in hands on the team, it is important to be aware of what this package is formed by. It contains various components that are essential for its assembly. Ensure that you have all the following items before proceeding with the setup.
 
 ## Simulation Guide
 
