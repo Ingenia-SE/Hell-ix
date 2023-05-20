@@ -22,7 +22,7 @@ The program is formed by three different files:
 Overall, the combination of the main program, **trajectory_planner.m**, the modified **hobbysplines.m** function, and the **plotGate.m** function provides a comprehensive solution for generating optimal trajectories, drawing smooth 3D Bezier curves, and visualizing the gates, resulting in an effective and user-friendly program for drone navigation.
 
 <details>
-  <summary><b>Images</b></summary>
+  <summary>Images</summary>
   <p align="center"> 
   <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/trajectory_planner.png">
    
@@ -65,11 +65,23 @@ The Crazyflie 2.1 undergoes extensive testing during production, but it's recomm
 To perform the power-on self-test, connect the Crazyflie 2.1 to a USB power source. The test result is indicated by the LEDs M1 and M4. If the M4 LED blinks green five times rapidly, it means the test has passed.
 In case the self-test fails, the M1 LED will blink red five times rapidly, followed by a pause and repetition. In such a situation, it is recommended to seek help by visiting the support discussions provided by the manufacturer.
 
+<b>Note:The Crazyflie 2.1 has four LEDs labeled M1, M2, M3, and M4, which correspond to each of the four motors. These LEDs provide visual feedback on the status and operation of the respective motors during flight or testing. They help users monitor the individual motor status and detect any potential issues or abnormalities.</b>
+
+<details>
+  <summary>Crazyflie Leds Images</summary>
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/CrazyflieLeds.jpeg" style="width: 700px; height: 400px;">
+   
+  </p>
+  <p align="center">Crazyflie LEDs</p>
+ 
+</details>
+
 #### Assembling
 
 The assembly process of the Crazyflie 2.1 can typically be completed in under 10 minutes. However, it is crucial to take into account a few important considerations. Thus, it is imperative to correctly follow the provided instructions:
 
-- **Wire Twisting**: Begin by twisting the wires of the four motors. This technique serves to minimize electronic noise and enhance the fit of the wires within the motor mount "hooks".
+- **Wire Twisting**: Begin by twisting the wires of the four motors. This technique serves to minimize electronic noise and enhance the fit of the wires within the motor mount "hooks". 
 
 - **Motor Mounting**: Push the four motors firmly into the motor mounts. Some force may be required for insertion. If encountering difficulty, try placing the motor can towards the edge of a table and apply pressure on the mount. However, exercise caution to avoid pressing on the motor axis, as it could potentially damage the motor. Ensure that the motor is fully inserted until it reaches the stop within the mount.
 
@@ -79,6 +91,22 @@ The assembly process of the Crazyflie 2.1 can typically be completed in under 10
 
 - **Propeller Attachment**: Now, it is time to attach the propellers. Note that two types of propellers are provided: clock-wise (CW) and counter-clockwise (CCW). Each type is packaged separately in the box. Carefully examine the shape of the tips and verify the correct rotation direction. Typically, CW propellers are labeled with an "A" or "A1" marking, while CCW propellers bear a "B" or "B1" marking. Additionally, ensure that the propellers are correctly oriented, with the convex side facing upwards.
 
+<details>
+  <summary>Propeller Images</summary>
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/RotorBlades%26Motors.jpeg" style="width: 300px; height: 200px;">
+   
+  </p>
+  <p align="center">Two types of motors and propellers, the transparent ones are larger and are paired with more powerful motors.</p>
+  
+  
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/RotorBlade.jpeg" style="width: 300px; height: 200px;">
+   
+  </p>
+  <p align="center">Standard propeller view</p>
+</details>
+
 - **Rubber Pad Attachment**: Affix the rubber pad to the Crazyflie 2.1 between the expansion headers.
 
 - **Header Attachment**: Inside the box, you will find long and short headers. Select the two short headers and insert them into the expansion connector.
@@ -87,12 +115,41 @@ The assembly process of the Crazyflie 2.1 can typically be completed in under 10
 
 - **Battery Connection**: Connect the battery to finalize the assembly process. It is advisable to bend the battery wires and position them underneath the PCB to ensure they are out of the way.
 
-
+<details>
+  <summary>Battery Images</summary>
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/Battery.jpeg" style="width: 300px; height: 200px;">
+   
+  </p>
+  <p align="center">Battery view</p>
+  
+  
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/BatteryHolderDeck.jpeg" style="width: 300px; height: 200px;">
+   
+  </p>
+  <p align="center">Battery oblicual view</p>
+</details>
 
 - **Power-On**: The assembly is now complete, and it is time to power on the device. Note that the power button is a push button, not a sliding button. During the power-on self-test, observe the sequential spinning of all propellers. Verify that each propeller spins correctly. If any propellers fail to spin, check the motor connections for proper engagement.
 
 By meticulously following these instructions, you have successfully completed the assembly process of the device. It is essential to ensure that all components are securely connected, and the power-on self-test confirms the appropriate functioning of the propellers.
 
+<details>
+  <summary>Assembled Crazyflie Images</summary>
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/AssembledCrazyflie_TopView.jpeg" style="width: 300px; height: 200px;">
+   
+  </p>
+  <p align="center">Top view</p>
+  
+  
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/AssembledCrazyflie_BottomView.jpeg" style="width: 300px; height: 200px;">
+   
+  </p>
+  <p align="center">Bottom view</p>
+</details>
 
 ### Software setup
 
