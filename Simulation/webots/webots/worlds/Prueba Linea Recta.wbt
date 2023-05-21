@@ -1,0 +1,192 @@
+#VRML_SIM R2023a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/objects/lights/protos/CeilingLight.proto"
+EXTERNPROTO "../protos/Crazyflie.proto"
+
+WorldInfo {
+  info [
+    "Bitcraze's Crazyflie drone with autonomoy."
+    "This simulation has the Crazyflie in an apartement with wall following'"
+  ]
+  title "Crazyflie Apartment"
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.2472674156039916 0.33916700598309113 -0.9076478211470509 1.0868114534566333
+  position -1.8973753564411089 6.471066193650507 3.9711865679606704
+  exposure 0.5
+  follow "Crazyflie"
+}
+TexturedBackground {
+  texture "empty_office"
+  skybox FALSE
+  skyColor [
+    0.2 0.2 0.2
+  ]
+}
+DEF FLOOR Solid {
+  translation 0 10.5 0
+  rotation 0 0 1 1.5708003061004252
+  children [
+    Shape {
+      appearance Parquetry {
+        textureTransform TextureTransform {
+          scale 6 9
+        }
+      }
+      geometry DEF FLOOR_PLANE Plane {
+        size 29.2 30
+      }
+    }
+  ]
+  name "floor"
+  boundingObject USE FLOOR_PLANE
+  locked TRUE
+}
+DEF ROOF Solid {
+  translation -4.95 -3.3 2.3999
+  rotation 1 0 0 3.14159
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.8 0.8 0.8
+        baseColorMap ImageTexture {
+          url [
+            "https://raw.githubusercontent.com/cyberbotics/webots/R2023a/projects/default/worlds/textures/roughcast.jpg"
+          ]
+        }
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          scale 8 8
+        }
+      }
+      geometry USE FLOOR_PLANE
+    }
+  ]
+  name "roof"
+  boundingObject USE FLOOR_PLANE
+  locked TRUE
+}
+Wall {
+  translation -10 10.3 0
+  name "wall 3"
+  size 0.4 25 2.4
+}
+Wall {
+  translation 15 10.3 0
+  name "wall 3(1)"
+  size 0.4 29 2.4
+}
+Wall {
+  translation 0 -4 0
+  rotation 0 0 1 1.5708
+  name "wall 8"
+  size 0.3 30 2.4
+}
+Wall {
+  translation 0 23 0
+  rotation 0 0 1 1.5708
+  name "wall 8(1)"
+  size 0.3 20 2.4
+}
+CeilingLight {
+  translation 2 2 2.4
+  name "ceiling light 1(2)"
+  pointLightIntensity 9
+}
+CeilingLight {
+  translation 2 -2 2.4
+  name "ceiling light 1(1)"
+  pointLightIntensity 9
+}
+CeilingLight {
+  translation 2 2 2.4
+  name "ceiling light 1(5)"
+  pointLightIntensity 9
+}
+CeilingLight {
+  translation 6 2 2.4
+  name "ceiling light 1(6)"
+  pointLightIntensity 9
+}
+CeilingLight {
+  translation 6 -2 2.4
+  name "ceiling light 1(7)"
+  pointLightIntensity 9
+}
+CeilingLight {
+  translation 10 -2 2.4
+  name "ceiling light 1(8)"
+  pointLightIntensity 9
+}
+CeilingLight {
+  translation 10 2 2.4
+  name "ceiling light 1(9)"
+  pointLightIntensity 9
+}
+CeilingLight {
+  translation -3 0 2.4
+  name "ceiling light 1(3)"
+  pointLightIntensity 9
+}
+Crazyflie {
+  translation 0 0 0.0149992
+  rotation 3.9849019707785566e-07 -2.432049727994947e-05 -0.9999999997041773 0.019953408613004434
+  controller "crazyflie_controller_position_py"
+}
+Solid {
+  translation 2 -0.5 0.75
+  rotation 0 0 1 1.5707996938995747
+  scale 0.0009 0.0009 0.0009
+  children [
+    CadShape {
+      url [
+        "../../meshes/OBSTACULO.obj"
+      ]
+    }
+  ]
+  name "obstacle"
+}
+Solid {
+  translation 4 -0.5 0.75
+  rotation 0 0 1 1.5707996938995747
+  scale 0.0009 0.0009 0.0009
+  children [
+    CadShape {
+      url [
+        "../../meshes/OBSTACULO.obj"
+      ]
+    }
+  ]
+  name "obstacle(1)"
+}
+Solid {
+  translation 6 -0.5 0.75
+  rotation 0 0 1 1.5707996938995747
+  scale 0.0009 0.0009 0.0009
+  children [
+    CadShape {
+      url [
+        "../../meshes/OBSTACULO.obj"
+      ]
+    }
+  ]
+  name "obstacle(2)"
+}
+Solid {
+  translation 8 -0.5 0.75
+  rotation 0 0 1 1.5707996938995747
+  scale 0.0009 0.0009 0.0009
+  children [
+    CadShape {
+      url [
+        "../../meshes/OBSTACULO.obj"
+      ]
+    }
+  ]
+  name "obstacle(3)"
+}

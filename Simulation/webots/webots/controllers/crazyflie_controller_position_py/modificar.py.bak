@@ -1,0 +1,19 @@
+import csv
+
+# Ruta del archivo CSV de entrada y salida
+archivo_entrada = 'archivo_entrada.csv'
+archivo_salida = 'archivo_salida.csv'
+
+# Abrir el archivo de entrada
+with open(archivo_entrada, 'r') as file_entrada:
+    # Leer el contenido del archivo CSV
+    contenido = file_entrada.read()
+    
+    # Reemplazar las comas por puntos
+    contenido_modificado = contenido.replace(',', '.')
+
+# Guardar el contenido modificado en un nuevo archivo CSV
+with open(archivo_salida, 'w') as file_salida:
+    file_salida.write(contenido_modificado)
+
+print('Se ha modificado el separador en el archivo CSV.')
