@@ -18,4 +18,10 @@ This program enables the  **generation of a .csv file** with the 3D coordinates 
 In this folder the python scripts used to test the drone for performing simple tasks are included. Two tests have been included: one for simple take-off, maintaining the position and landing, and the second one to follow a straight line.
 
 ## Use of the Programs
-Talk about how to run the programs using an IDE and what are the necessary installations to run the programs, Crazyradio PA, etc.
+In order to compile and use the code that has been designed in this project, you must use **Python**, since it is the programming language that has been used to develop all the test programs. If you don't have it installed, you can get it from the following link: https://www.python.org/downloads/
+Once this tool is available, the next thing will be to have a code editor, in this case **Visual Studio Code** has been used. Which can be downloaded through the following link: https://code.visualstudio.com/download.
+
+When installing Python, you can make use of a number of libraries such as **"math"**, **"time"**, **"logging"**, **"cmath"** or **"csv"**. However, the following additional libraries will need to be installed:
+1. **cflib**: is the API written in Python used to communicate with Crazyflie. To install it, follow the steps described in the following link: https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/installation/install/.
+2. **cv2 (OpenCV)**: contains the necessary functions to develop the vision algorithm. It can be downloaded through the following link: https://opencv.org/releases/.
+3. **numpy**: used to perform numerical calculations. It can be installed by following the steps indicated in this link: https://numpy.org/install/.
