@@ -4,10 +4,20 @@ These folders contain all the files necessary for the execution of the different
 
 ## Simulation Preview
 ### Test 1 - Four-obstacles straight line
-![](https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_1_simulation.gif)
+
+<p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_1_simulation.gif"width="640">
+   
+  </p>
+  <p align="center">Test 1 - Four-obstacles straight line</p>
 
 ### Test 2 - Four-obstacles semicircle
-![](https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_2_simulation.gif)
+
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_2_simulation.gif"width="640">
+   
+  </p>
+  <p align="center">Test 2 - Four-obstacles semicircle</p>
 
 ## Installation
 It is necessary to have the Webots simulation program installed. If you do not have this program installed, it can be obtained through the following link: [Webots](https://cyberbotics.com/).
