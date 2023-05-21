@@ -23,6 +23,9 @@ These folders contain all the files necessary for the execution of the different
 It is necessary to have the Webots simulation program installed. If you do not have this program installed, it can be obtained through the following link: [Webots](https://cyberbotics.com/).
 
 ## Contents
+* **controllers**: This folder contains different controllers that can be loaded into Crazyflie to manage your flight. In this folder you will find controllers programmed in C and Python.
+* **meshes**: Inside this folder there are different meshes that compose the 3D environment of our test. Inside you will find the model of the obstacles designed by Hell-Ix members.
+* **webots**: Inside is the fundamental part of the project. Inside this folder there is another subfolder called ``words`` where both the straight line test and the curve test are designed. These scenarios have the following names ```Prueba Linea Recta.wbt``` and ```Prueba Curva.wbt```.
 
 ## Usage
 Once you have the program, you have to open the following folder where both test simulations are located: ```.\webots\webots\worlds```.
@@ -31,7 +34,7 @@ When you have loaded the world, the next step is to run the simulation to see th
 ## Parts of the simulation
 To realize the controller that manages the crazyflie in the simulation, the following process has been carried out: 
 
-1. Search for specific documentation to know the libraries that should be added to the project to be able to perform a simple flight.
+1. Search for specific documentation to know the libraries that should be added to the project to be able to perform a simple flight. These libraries have been found in the repository of the manufacturer of our drone, bitcraze. This repository provided a simple simulation in which the drone was able to clear and move through a furnished room by following the walls of the environment. For more information on this repository it is recommended to visit the following link [GitHub Bitcraze](https://github.com/bitcraze) 
 
 2. Once this first flight was successfully completed, the process of simulating a trajectory was started. To do this, first of all a function called ``PID_CF`` was implemented, where through the target position, the function regulates the power to be supplied to each of the drone motors. This function is a PID controller where each of the constants of the controller had to be adjusted.
 
