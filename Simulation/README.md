@@ -2,21 +2,21 @@
 
 These folders contain all the files necessary for the execution of the different tests that make up the drone competition. The simulation enables to simulate the drone environment for the two obstacles tests: the four-obstacles straight line and the four-obstacles semicircle races. 
 
-## Contents
-### Test 1 - Four-obstacles straight line. Simulation Preview
+## Simulation Preview
+### Test 1 - Four-obstacles straight line
 ![](https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_1_simulation.gif)
 
-### Test 2 - Four-obstacles semicircle. Simulation Preview
+### Test 2 - Four-obstacles semicircle
 ![](https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_2_simulation.gif)
 
 ## Installation
 It is necessary to have the Webots simulation program installed. If you do not have this program installed, it can be obtained through the following link: [Webots](https://cyberbotics.com/).
 
+## Contents
 
 ## Usage
 Once you have the program, you have to open the following folder where both test simulations are located: ```.\webots\webots\worlds```.
 When you have loaded the world, the next step is to run the simulation to see the results of each of the tests.
-
 
 ## Parts of the simulation
 To realize the controller that manages the crazyflie in the simulation, the following process has been carried out: 
