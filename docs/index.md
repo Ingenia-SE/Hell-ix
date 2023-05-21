@@ -1,4 +1,4 @@
-<img src="/img/logo_background.png?raw=true" alt="Hell-ix Logo" width="210">
+<img src="/blob/main/img/logo_background.png?raw=true" alt="Hell-ix Logo" width="210">
 
 # Hell-ix Project
 
