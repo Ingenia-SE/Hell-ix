@@ -1,9 +1,9 @@
 # Path Follower Assisted by Computer Vision
 
 ## Description of the Program
-In the first test (**csv_follower.py**), the drone must pass through a series of gates in a certain amount of time.
+With the first script ```csv_follower.py```, the drone passes through a series of gates in a certain amount of time.
 To do this, a series of setpoints defined in a csv file are read, which describes the trajectory that the drone must follow in order to pass through all the obstacles.
-In addition, in the second test (**csv_follower_vision.py**) a function has been defined that must read the images provided by the drone's AI Deck camera, analyse them and determine the centre of the gates.
+In addition to this, script ```csv_follower_vision.py``` has been programmed with an additional function that reads the images provided by the drone's AI-deck camera, analyzes them and determines the centre of the gates.
 In this way, the drone is able to correct any errors in the original trajectory by means of the vision algorithm.
 
 ## Vision algorithm
