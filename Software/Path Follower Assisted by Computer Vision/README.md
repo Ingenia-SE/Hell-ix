@@ -14,6 +14,8 @@ After receiving the images from the camera, they are processed in this way:
 4. By superimposing both masks, the contours of the doors to be crossed are obtained.
 5. The next step is to detect the centre of the nearest contour by means of a function that returns the centre of the contour it receives as a parameter.
 
+![](https://github.com/Ingenia-SE/Hell-ix/blob/main/img/vision_algorithm.gif)
+
 ## Position Correction
 Once the position of the centre of the door to be crossed is known, it is necessary to correct the position of the drone in such a way that it manages to centre the centre of the door in the image, in order to be sure that the drone is going to cross it.
 
