@@ -97,7 +97,7 @@ By following these steps, you can download Zadig, connect the Bitcraze device, a
 
 ### Hardware setup
 
-Once the Crazyflie 2.1 box is in hands on the team, it is important to be aware of what this package is formed by. It contains various components that are essential for its assembly. Ensure that you have all the following items before proceeding with the setup.
+Once the Crazyflie 2.1 box is in the team's hands, it is important to be aware of what this package is formed by. It contains various components that are essential for its assembly. Ensure that you have all the following items before proceeding with the setup.
 
 The box contains the following components:
   
