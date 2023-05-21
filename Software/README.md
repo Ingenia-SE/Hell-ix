@@ -25,3 +25,7 @@ When installing Python, you can make use of a number of libraries such as **"mat
 1. **cflib**: is the API written in Python used to communicate with Crazyflie. To install it, follow the steps described in the following link: https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/installation/install/.
 2. **cv2 (OpenCV)**: contains the necessary functions to develop the vision algorithm. It can be downloaded through the following link: https://opencv.org/releases/.
 3. **numpy**: used to perform numerical calculations. It can be installed by following the steps indicated in this link: https://numpy.org/install/.
+
+## Drone control
+To be able to control the drone it is necessary to have the **Crazyradio PA**, it is a longe range open USB radio dongle based on the nRF24LU1+ from Nordic Semiconductor.
+In addition, you have to install the **libusb driver** that allows USB communication from Windows. It can be downloaded by following the steps explained in the following link: https://www.bitcraze.io/documentation/repository/crazyradio-firmware/master/building/usbwindows/
