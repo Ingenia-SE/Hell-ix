@@ -14,7 +14,7 @@ The project has three main modules aimed at achieving autonomous operation of th
 ### Race Trajectory Planner
 The first main module consist on a program which generates a .csv file that contains the 3D coordinates of the best possible flight path for the drone to navigate through a series of designated gates. By defining specific center points for the drone to pass through and providing additional parameters such as gate orientations, the program calculates the most efficient trajectory. Furthermore, the trajectory can be optimized based on the drone's power-to-weight ratio, which determines how sharply it can maneuver around corners. This optimization is achieved by adjusting the "tension" at each gate. The program also provides a visual representation where the obstacles, arranged in the order the drone will encounter them, are displayed alongside the optimized flight path. Users have complete flexibility to configure the obstacles, including the ability to modify their number, positions, orientations, and sizes.
 
-The program consists of three files. The main program, **"trajectory_planner.m"**, generates an optimal trajectory and creates a .csv file. It utilizes various algorithms and functions, including the modified **"hobbysplines.m"** function, which employs Hobby's algorithm to select control points for smooth 3D Bezier curves. Additionally, it utilizes the **"plotGate.m"** function which visualizes the gates' positions and orientations, providing a clear representation of the gate arrangement along with the optimized trajectory.Overall, the combination of the main program, trajectory_planner.m, the modified hobbysplines.m function, and the plotGate.m function provides a comprehensive solution for generating optimal trajectories, drawing smooth 3D Bezier curves, and visualizing the gates, resulting in an effective and user-friendly program for drone navigation.
+The program consists of three files. The main program, ```trajectory_planner.m```, generates an optimal trajectory and creates a .csv file. It utilizes various algorithms and functions, including the modified ```hobbysplines.m``` function, which employs Hobby's algorithm to select control points for smooth 3D Bezier curves. Additionally, it utilizes the ```plotGate.m``` function which visualizes the gates' positions and orientations, providing a clear representation of the gate arrangement along with the optimized trajectory.Overall, the combination of the main program, trajectory_planner.m, the modified hobbysplines.m function, and the plotGate.m function provides a comprehensive solution for generating optimal trajectories, drawing smooth 3D Bezier curves, and visualizing the gates, resulting in an effective and user-friendly program for drone navigation.
 
 <details>
   <summary>Images</summary>
@@ -27,6 +27,28 @@ The program consists of three files. The main program, **"trajectory_planner.m"*
 
 
 ### Computer Vision
+
+The second main module consists of correcting the altitude and direction of the drone based on the obstacles it encounters along its path. To achieve this, the drone uses the camera it carries to recognize doors, aligning itself both in height and direction towards the center of the door. The operation of this algorithm relies on the use of another algorithm that reads the path to follow from an external file.
+
+With the first script ```csv_follower.py```, the drone passes through a series of gates in a certain amount of time.
+To do this, a series of setpoints defined in a csv file are read, which describes the trajectory that the drone must follow in order to pass through all the obstacles.
+In addition to this, script ```csv_follower_vision.py``` has been programmed with an additional function that reads the images provided by the drone's AI-deck camera, analyzes them and determines the centre of the gates.
+Once the position of the centre of the door to be crossed is known, it is necessary to correct the position of the drone in such a way that it manages to centre the centre of the door in the image, in order to be sure that the drone is going to cross it.
+
+It is necessary to modify two parameters, the yaw and the height. To do this, two constants "K" are defined that will be multiplied by the errors detected in the parameters to be modified, in order to be able to add these values to those that have been read from the csv. In this way, it is possible to vary the value of these parameters sufficiently to correct these small trajectory errors and pass through the obstacles successfully.
+In this way, the drone is able to correct any errors in the original trajectory by means of the vision algorithm.
+
+<details>
+  <summary>Gate recognition Example</summary>
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/vision_algorithm.gif" width="640">
+   
+  </p>
+  <p align="center">Example of door recognition.</p>
+  
+
+</details>
+
 
 ### Drone Racing Competition Simulation Environment
 
@@ -80,7 +102,7 @@ Next, all the software requirements needed for using this project's files and th
   
 - Open a file browser and find the drive named Crazyradio2.
   
-- Go to the release page on github. Download the file named crazyradio2-CRPA-emulation-[version].uf2 by clicking it.
+- Go to the release page on github. Download the file named ```crazyradio2-CRPA-emulation-[version].uf2``` by clicking on it.
   
 - In your file browser, drag and drop the downloaded file to the Crazyradio2 drive.
   
@@ -283,7 +305,9 @@ By following these technical and formal steps, users can effectively utilize the
 
 ## Simulation Guide
 
-
+After completing the installation of Webots as described in the installation section, it is time to load the world and run the simulation.
+To do this, it is necessary to enter the folder ```\Simulation\webots\webots\worlds``` and load one of the two available experiments: Straight Line Test (```Prueba Linea Recta.wbt```) and Curve Test (```Prueba Curva.wbt```).
+Once one of the experiments is loaded, the next step is to run the simulation to observe the results of the test.
 
 ## User Guide
 
