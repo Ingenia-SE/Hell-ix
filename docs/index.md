@@ -1,5 +1,4 @@
-
-<img src="/img/logo_background.png" class="img-responsive" width="210"> </div>
+<img src="/img/logo_background.png?raw=true" alt="Hell-ix Logo" width="210">
 
 # Hell-ix Project
 
