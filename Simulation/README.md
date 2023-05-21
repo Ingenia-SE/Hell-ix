@@ -1,9 +1,16 @@
-# Hell - IX Simulation
+# Competition Tests Simulation
 
-These folders contain all the files necessary for the execution of the different tests that make up the drone competition.
+These folders contain all the files necessary for the execution of the different tests that make up the drone competition. The simulation enables to simulate the drone environment for the two obstacles tests: the four-obstacles straight line and the four-obstacles semicircle races. 
+
+## Contents
+### Test 1 - Four-obstacles straight line. Simulation Preview
+![](https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_1_simulation.gif)
+
+### Test 2 - Four-obstacles semicircle. Simulation Preview
+![](https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_2_simulation.gif)
 
 ## Installation
-It is necessary to have the WEBOTS simulation program installed. If you do not have this program installed, it can be obtained through the following link: [Webots](https://cyberbotics.com/)
+It is necessary to have the Webots simulation program installed. If you do not have this program installed, it can be obtained through the following link: [Webots](https://cyberbotics.com/).
 
 
 ## Usage
@@ -21,9 +28,3 @@ To realize the controller that manages the crazyflie in the simulation, the foll
 3. Once the controller was working correctly, the next step was to read a csv file detailing each and every one of the points where the drone had to reach to perform the trajectory of each of the tests. To do this, the .csv file was read with the ``csv`` library of pyhton, where all these data are stored in a system matrix. Each of the rows determines a point that the drone must be able to reach, so a loop was implemented that did not change the reference position until it had not reached that position taking into account an assumable error.
 
 4. Once the drone was able to follow trajectories, the design of the test scenarios began. To do this, each of the obstacles was first designed in 3D using CAD tools. Once designed, the obstacles were placed in the positions agreed with the opposing team. 
-
-
-
-
-## License
-Hell - Ix (Universidad Politécnica de Madrid)
