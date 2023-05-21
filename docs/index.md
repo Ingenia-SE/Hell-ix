@@ -1,4 +1,4 @@
-<img src="/img/logo_background.png" alt="Hell-ix-Logo" width="210">
+<img src="/img/Captura.PNG" alt="Hell-ix-Logo" width="210">
 
 # Hell-ix Project
 
