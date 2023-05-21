@@ -1,5 +1,5 @@
 
-<img src="img/logo_background.png" class="img-responsive" alt="210"> </div>
+<img src="/img/logo_background.png" class="img-responsive" width="210"> </div>
 
 # Hell-ix Project
 
