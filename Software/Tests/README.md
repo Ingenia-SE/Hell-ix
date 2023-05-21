@@ -4,10 +4,8 @@ In this folder the python scripts used to test the drone for performing simple t
 ## Description of the Tests
 ### 1. **up_and_down.py**
 In this test the drone must climb 1.5 metres above the ground, hold the position for 2 seconds and land. 
-
 To do this, a series of "for" loops have been used that establish setpoints at which the drone must stay for a certain time.
 
 ### 2. **move_forward.py**
 In this test the drone must rise 1.5 metres above the ground, hold the position for 2 seconds and move in a straight line in the direction of the x-axis for 1.5 metres. It must then land.
-
 For this, a series of "for" loops have been used where a series of setpoints are defined in which the drone must stay for a certain amount of time.
