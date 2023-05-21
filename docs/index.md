@@ -1,4 +1,4 @@
-<img src="/Hell-ix/blob/main/img/logo_background.png?raw=true" alt="Hell-ix Logo" width="210">
+<img src="https://www.tooltyp.com/wp-content/uploads/2014/10/1900x920-8-beneficios-de-usar-imagenes-en-nuestros-sitios-web.jpg" alt="Hell-ix Logo" width="210">
 
 # Hell-ix Project
 
