@@ -6,8 +6,8 @@ This program enables the  **generation of a .csv file** with the 3D coordinates 
 
 ## Program Files
 
-1. **Main program trajectory_planner.m**: This is the main program which creates the .csv file with the optimal trajectory.
-2. **Function hobbysplines.m**: This is a function developped by Will Robertson and the University of Adelaide that has been slightly modified. It employs Hobby's algorithm for choosing control points based on curvature and tension in order to draw 3D Bezier curves. 
-3. **Function plotGate.m**: This is a function to plot a gate given its position and orientation.
+1. **Main program ```trajectory_planner.m```**: This is the main program which creates the .csv file with the optimal trajectory.
+2. **Function ```hobbysplines.m```**: This is a function developped by Will Robertson and the University of Adelaide that has been slightly modified. It employs Hobby's algorithm for choosing control points based on curvature and tension in order to draw 3D Bezier curves. 
+3. **Function ```plotGate.m```**: This is a function to plot a gate given its position and orientation.
 
 <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/trajectory_planner.png?raw=true" alt="Hell-ix-Logo" width="1000">
