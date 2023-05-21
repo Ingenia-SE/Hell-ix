@@ -1,5 +1,5 @@
-<img src="/img/Captura.PNG" alt="Hell-ix-Logo" width="210"/>
-<img src="img/logo_background.png" class="img-responsive" alt=""> </div>
+
+<img src="img/logo_background.png" class="img-responsive" alt="210"> </div>
 
 # Hell-ix Project
 
