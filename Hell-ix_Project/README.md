@@ -2,7 +2,7 @@
 The present model is aimed to provide reference for the developers taking part in the project as well as to give other people a general overview of the work. 
 
 ## Model Use and Management
-To be able to use and modify the model, it is required to have the software MATLAB installed. Additionally, the following add-ons should be installed:
+All the model information is documented in the Model Final Document that can be found in <strong><code>Documentation</code></strong> folder. In this document it is also included all the information concerning model use and management. To be able to use and modify the model, it is required to have the software MATLAB installed. Additionally, the following add-ons should be installed:
 - Simulink
 - System Composer
 - Requirements Toolbox
