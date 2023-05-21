@@ -28,4 +28,6 @@ When installing Python, you can make use of a number of libraries such as **"mat
 
 ## Drone control
 To be able to control the drone it is necessary to have the **Crazyradio PA**, it is a longe range open USB radio dongle based on the nRF24LU1+ from Nordic Semiconductor.
+![](https://github.com/Ingenia-SE/Hell-ix/blob/main/img/Crazyradio_PA.jpeg)
+
 In addition, you have to install the **libusb driver** that allows USB communication from Windows. It can be downloaded by following the steps explained in the following link: https://www.bitcraze.io/documentation/repository/crazyradio-firmware/master/building/usbwindows/
