@@ -32,6 +32,65 @@ The program consists of three files. The main program, **"trajectory_planner.m"*
   
   
 ## Installation
+**Requirements:** [Python 3.8](https://www.python.org/downloads/release/python-3816/) or later.
+
+Next, all the software requirements needed for using this project's files and their installation are explained.
+
+<details>
+  <summary> CFClient installation </summary>
+  
+- **Install the CFClient**: Begin by installing the [CFClient software](https://www.bitcraze.io/documentation/repository/crazyflie-clients-python/master/userguides/userguide_client/) from the source code on your computer. This software serves as the interface for controlling the Crazyflie. If you don't have it installed, press the link and follow the guide steps.
+
+- **Connect the Crazyradio**: Plug in the Crazyradio 2.0 or Crazyradio PA into a USB port on your computer. This radio module facilitates communication between the CFClient and the Crazyflie.
+</details>
+<details>
+  <summary> Crazyradio 2.0 firmware update </summary>
+  
+- The first thing to do is to assemble the hardware, which contains the Antenna and the Crazyradio 2.0 USB dongle. 
+  
+- Continue setting the antenna on to the connector on the USB dongle.
+  
+- To flash new firmware to the Crazyradio 2.0 , it must first be set to the bootloader mode.
+  
+- Press and hold the button.
+  
+- Insert the USB dongle into a USB port while holding the button.
+  
+- Verify that the LED is pulsating with a red light, this indicates that the Crazyradio 2.0  is in bootloader mode.
+  
+- When in bootloader mode, the Crazyradio 2.0  will appear as a USB drive in your operating system. Firmware is installed by copying a .uf2 firmware file to the drive.
+  
+- Open a file browser and find the drive named Crazyradio2.
+  
+- Go to the release page on github. Download the file named crazyradio2-CRPA-emulation-[version].uf2 by clicking it.
+  
+- In your file browser, drag and drop the downloaded file to the Crazyradio2 drive.
+  
+- The installation takes less than a second and when done, the Crazyradio 2.0  will restart running the new firmware. Since it is no longer in bootloader mode, the USB drive will no longer be available.
+
+When the Crayradio PA emulation firmware starts up, the LED will light up briefly in white. If you missed it when flashing, unplug and re-plug the Crazyradio 2.0  to restart it.The Crazyradio 2.0 will be nowready to use and it will behave like a Crazyradio PA, which means it will be compatible with all the products in the Crazyflie ecosystem.
+
+<b>Note</b>: Depending on which operating system you use, you will have to install drivers or do some configuration to communicate with the Crazyradio 2.0. 
+ </details>
+  <details>
+    <summary>Drivers installation</summary>
+To install the necessary drivers for the Bitcraze device, follow these steps:
+
+- Download Zadig: Visit the website http://zadig.akeo.ie/ and download the Zadig software.
+
+- Connect the Bitcraze device to your PC: Plug in the Bitcraze device, and Windows will display an installation window. Note that on Windows 8 and 10, the window may close automatically without any action. On Windows 7, you need to close the "install failed" window.
+
+- Launch Zadig: Open the Zadig software. You should see a list of devices available.
+
+- Select the Device and Driver: Locate your Bitcraze device in the list and select it. Choose "libusb" as the driver option.
+
+- Install the Driver: Click the "Install" button to begin the driver installation process.
+
+- Wait for Installation: The installation process will run, and it should complete successfully. The duration of the installation can vary, ranging from quick to a few minutes.
+
+By following these steps, you can download Zadig, connect the Bitcraze device, and install the required drivers for proper functionality.
+  </details>
+
 
 
 ## Setup Guide
@@ -170,61 +229,9 @@ To control the flight of the Crazyflie, you have the option to use either a mobi
 
 However, in the case of the team, it has been chosen a different approach. Instead of using a gamepad,  the movement of the Crazyflie is controlled by programming and executing trajectories within the Python IDE using the CFClient.
 
-The CFClient is a software tool that serves as a graphical interface for interacting with the Crazyflie. It allows to monitor and control various aspects of the drone's flight parameters, sensor data, and behavior. Additionally, you can establish a connection between the CFClient and the Crazyflie by utilizing the Crazyradio 2.0 or Crazyradio PA for wireless communication.
-Software setup steps:
+The CFClient is a software tool that serves as a graphical interface for interacting with the Crazyflie. It allows to monitor and control various aspects of the drone's flight parameters, sensor data, and behavior. Additionally, you can establish a connection between the CFClient and the Crazyflie by utilizing the Crazyradio 2.0 or Crazyradio PA for wireless communication. Check the Installation section to get information about how to install it.
 
-- **Install the CFClient**: Begin by installing the CFClient software on your computer. This software serves as the interface for controlling the Crazyflie.
-
-- **Connect the Crazyradio**: Plug in the Crazyradio 2.0 or Crazyradio PA into a USB port on your computer. This radio module facilitates communication between the CFClient and the Crazyflie.
-
-<details>
-  <summary> Crazyradio 2.0 configuration </summary>
-  
-- The first thing to do is to assemble the hardware, which contains the Antenna and the Crazyradio 2.0 USB dongle. 
-  
-- Continue setting the antenna on to the connector on the USB dongle.
-  
-- To flash new firmware to the Crazyradio 2.0 , it must first be set to the bootloader mode.
-  
-- Press and hold the button.
-  
-- Insert the USB dongle into a USB port while holding the button.
-  
-- Verify that the LED is pulsating with a red light, this indicates that the Crazyradio 2.0  is in bootloader mode.
-  
-- When in bootloader mode, the Crazyradio 2.0  will appear as a USB drive in your operating system. Firmware is installed by copying a .uf2 firmware file to the drive.
-  
-- Open a file browser and find the drive named Crazyradio2.
-  
-- Go to the release page on github. Download the file named crazyradio2-CRPA-emulation-[version].uf2 by clicking it.
-  
-- In your file browser, drag and drop the downloaded file to the Crazyradio2 drive.
-  
-- The installation takes less than a second and when done, the Crazyradio 2.0  will restart running the new firmware. Since it is no longer in bootloader mode, the USB drive will no longer be available.
-
-When the Crayradio PA emulation firmware starts up, the LED will light up briefly in white. If you missed it when flashing, unplug and re-plug the Crazyradio 2.0  to restart it.The Crazyradio 2.0 will be nowready to use and it will behave like a Crazyradio PA, which means it will be compatible with all the products in the Crazyflie ecosystem.
-
-<b>Note</b>: Depending on which operating system you use, you will have to install drivers or do some configuration to communicate with the Crazyradio 2.0. 
-  <details>
-    <summary>Drivers installation</summary>
-To install the necessary drivers for the Bitcraze device, follow these steps:
-
-- Download Zadig: Visit the website http://zadig.akeo.ie/ and download the Zadig software.
-
-- Connect the Bitcraze device to your PC: Plug in the Bitcraze device, and Windows will display an installation window. Note that on Windows 8 and 10, the window may close automatically without any action. On Windows 7, you need to close the "install failed" window.
-
-- Launch Zadig: Open the Zadig software. You should see a list of devices available.
-
-- Select the Device and Driver: Locate your Bitcraze device in the list and select it. Choose "libusb" as the driver option.
-
-- Install the Driver: Click the "Install" button to begin the driver installation process.
-
-- Wait for Installation: The installation process will run, and it should complete successfully. The duration of the installation can vary, ranging from quick to a few minutes.
-
-By following these steps, you can download Zadig, connect the Bitcraze device, and install the required drivers for proper functionality.
-  </details>
-</details>
-
+Once you have everything installed and working correctly, you can connect your computer with the drone:
 - **Launch the CFClient**: Open the CFClient software on your computer. This will provide you with access to various control and configuration options for the Crazyflie.
 
 - **Establish Radio Connection**: Within the CFClient, locate the option to establish a radio connection. This process establishes a wireless link between the CFClient and the Crazyflie through the Crazyradio.
