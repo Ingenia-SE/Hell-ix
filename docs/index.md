@@ -19,7 +19,7 @@ The program consists of three files. The main program, **"trajectory_planner.m"*
 <details>
   <summary>Images</summary>
   <p align="center"> 
-  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/trajectory_planner.png">
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/trajectory_planner.png?raw=true">
    
   </p>
   <p align="center">Trayectory planner</p>
