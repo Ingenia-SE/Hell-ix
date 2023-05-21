@@ -101,13 +101,9 @@ if __name__ == '__main__':
         csv_file_path = "C:/Users/Usuario/Desktop/VUELO CRAZYFLIE/trajectory.csv"
         csv_reader = csv.reader(open(csv_file_path, 'r'))
         for row in csv_reader:
-            x, y, z = float(row[0]), float(row[1]), float(row[2])
-            if row == 0:
-                angle = 0
-            else:
-                angle = -np.arctan((y-y0)/(x-x0)) * 180 / math.pi
+            x, y, z, yaw = float(row[0]), float(row[1]), float(row[2]), float(row[3])
             ojodron()
-            cf.commander.send_position_setpoint(y, -x, z - errorz, angle - errorangulo)
+            cf.commander.send_position_setpoint(y, -x, z - errorz, yaw - errorangulo)
             time.sleep(0.02)
             x0, y0 = x, y
 
@@ -116,5 +112,6 @@ if __name__ == '__main__':
             time.sleep(0.05)
 
         cf.commander.send_stop_setpoint()
+
 
 
