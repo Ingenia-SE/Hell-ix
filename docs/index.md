@@ -98,7 +98,8 @@ By following these steps, you can download Zadig, connect the Bitcraze device, a
 ### Hardware setup
 
 Once the Crazyflie 2.1 box is in the team's hands, it is important to be aware of what this package is formed by. It contains various components that are essential for its assembly. Ensure that you have all the following items before proceeding with the setup.
-
+<details>
+    <summary>Components</summary>
 The box contains the following components:
   
 - 1 x Crazyflie 2.X control board with all components mounted
@@ -111,6 +112,7 @@ The box contains the following components:
 - 2 x Long expansion connector pins (1×10, 2mm spacing, 14 mm long)
 - 1 x Battery holder expansion board
 - 1 x USB cable (only with the Crazyflie 2.1)
+</details>
 
 #### Power-on self-test
 
@@ -119,7 +121,10 @@ The Crazyflie 2.1 undergoes extensive testing during production, but it's recomm
 To perform the power-on self-test, connect the Crazyflie 2.1 to a USB power source. The test result is indicated by the LEDs M1 and M4. If the M4 LED blinks green five times rapidly, it means the test has passed.
 In case the self-test fails, the M1 LED will blink red five times rapidly, followed by a pause and repetition. In such a situation, it is recommended to seek help by visiting the support discussions provided by the manufacturer.
 
-<b>Note</b> :The Crazyflie 2.1 has four LEDs, each serving a specific purpose:
+<details>
+    <summary>Crazyflie Leds</summary>
+  
+The Crazyflie 2.1 has four LEDs, each serving a specific purpose:
 
 - **M1: The front right LED (1)**
 
@@ -149,10 +154,14 @@ These LED indicators provide valuable information about the status of the Crazyf
   <p align="center">Crazyflie LEDs</p>
  
 </details>
+</details>
 
 #### Assembling
 
-The assembly process of the Crazyflie 2.1 can typically be completed in under 10 minutes. However, it is crucial to take into account a few important considerations. Thus, it is imperative to correctly follow the provided instructions:
+The assembly process of the Crazyflie 2.1 can typically be completed in under 10 minutes. However, it is crucial to take into account a few important considerations. The following dropdown includes the steps to be followed for a proper assembly of the drone.
+
+<details>
+  <summary>Assembly Instructions</summary>
 
 - **Wire Twisting**: Begin by twisting the wires of the four motors. This technique serves to minimize electronic noise and enhance the fit of the wires within the motor mount "hooks". 
 
@@ -223,6 +232,7 @@ By meticulously following these instructions, you have successfully completed th
   </p>
   <p align="center">Bottom view</p>
 </details>
+</details>  
 
 ### Software setup
 To control the flight of the Crazyflie, you have the option to use either a mobile device or a computer. Using a mobile device provides a quick setup, although it may require more piloting skills. On the other hand, if you prefer more options and greater control, you can utilize a computer along with a Crazyradio 2.0 or Crazyradio PA and a gamepad.
