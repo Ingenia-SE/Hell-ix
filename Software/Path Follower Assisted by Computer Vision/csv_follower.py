@@ -38,12 +38,8 @@ if __name__ == '__main__':
         csv_file_path = "C:/Users/Usuario/Desktop/VUELO CRAZYFLIE/trajectory.csv"
         csv_reader = csv.reader(open(csv_file_path, 'r'))
         for row in csv_reader:
-            x, y, z = float(row[0]), float(row[1]), float(row[2])
-            if row == 0:
-                angle = 0
-            else:
-                angle = -np.arctan((y-y0)/(x-x0)) * 180 / math.pi
-            cf.commander.send_position_setpoint(y, -x, z, angle)
+            x, y, z, yaw = float(row[0]), float(row[1]), float(row[2]), float(row[3])
+            cf.commander.send_position_setpoint(y, -x, z, yaw)
             time.sleep(0.02)
             x0, y0 = x, y
 
