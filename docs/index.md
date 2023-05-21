@@ -29,7 +29,25 @@ The program consists of three files. The main program, **"trajectory_planner.m"*
 ### Computer Vision
 
 ### Drone Racing Competition Simulation Environment
+
+The third main module consists of performing simulations in the open-source software Cyberbotics. This program allows creating simulation environments by importing 3D models, which facilitates their visualization. Additionally, it allows using different programming languages to carry out the simulation. All the information related to the program can be found on the [Cyberbotics website](https://cyberbotics.com/).
+
+In this module, the main codes that govern the behavior of the drone are collected in the folder /webots/controllers, where both C and Python codes can be found. These codes (**pid_controller** and **pid_controller_position**) simulate the behavior of the drone using PID, where the first one is responsible for controlling the velocity of the drone, and the second one controls the position. The remaining files are primarily used to create the 3D space in the simulation program.
+
+<details>
+  <summary>Simulations</summary>
+  <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_1_simulation.gif"width="640">
+   
+  </p>
+  <p align="center">Test 1 - Four-obstacles straight line</p>
   
+   <p align="center"> 
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/test_2_simulation.gif"width="640">
+   
+  </p>
+  <p align="center">Test 2 - Four-obstacles semicircle</p>
+</details>
   
 ## Installation
 **Requirements:** [Python 3.8](https://www.python.org/downloads/release/python-3816/) or later.
