@@ -40,6 +40,7 @@ if __name__ == '__main__':
                x = (angle-45) * 4 / 360             #Avance 1m por 360 grados
                y = 0 + cmath.cos((angle-45)*4) * 0.5    #Circulo de 1m de diametro
                z = 1.5 + cmath.sin((angle-45)*4) * 0.5  #Altura entre 1 y 2 metros
+               cf.commander.send_position_setpoint(x, y, z, 0)
                time.sleep(0.02)
 
         #C�digo aterrizaje
