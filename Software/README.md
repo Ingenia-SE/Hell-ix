@@ -27,7 +27,7 @@ When installing Python, you can make use of a number of libraries such as **"mat
 3. **numpy**: used to perform numerical calculations. It can be installed by following the steps indicated in this link: https://numpy.org/install/.
 
 ## Drone control
-To be able to control the drone it is necessary to have the **Crazyradio PA**, it is a longe range open USB radio dongle based on the nRF24LU1+ from Nordic Semiconductor.
+To be able to control the drone it is necessary to have the **Crazyradio PA**, it is a long range open USB radio dongle based on the nRF24LU1+ from Nordic Semiconductor.
 
 ![](https://github.com/Ingenia-SE/Hell-ix/blob/main/img/Crazyradio_PA.jpeg)
 
