@@ -319,5 +319,6 @@ Once one of the experiments is loaded, the next step is to run the simulation to
 
 ## User Guide
 
+After connecting the drone to the computer, it is time to send it the programmed Python code to initiate its flight.
 
 ## Maintenance and Operations Manual
