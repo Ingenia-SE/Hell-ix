@@ -72,10 +72,18 @@ In this module, the main codes that govern the behavior of the drone are collect
 </details>
   
 ## Installation
-**Requirements:** [Python 3.8](https://www.python.org/downloads/release/python-3816/) or later.
+**Requirements:** [Python 3.8](https://www.python.org/downloads/release/python-3816/) or later. Code editor software (like [Visual Studio](https://code.visualstudio.com/download)).
 
 Next, all the software requirements needed for using this project's files and their installation are explained.
 
+<details>
+  <summary> Python libraries needed </summary>
+  
+- **cflib**: is the API written in Python used to communicate with Crazyflie. To install it, follow the steps described in the following [link](https://www.bitcraze.io/documentation/repository/crazyflie-lib-python/master/installation/install/).
+- **cv2 (OpenCV)**: contains the necessary functions to develop the vision algorithm. It can be downloaded through the following [link](https://opencv.org/releases/).
+- **numpy**: used to perform numerical calculations. It can be installed by following the steps indicated in this [link](https://numpy.org/install/).
+  
+</details>
 <details>
   <summary> CFClient installation </summary>
   
