@@ -34,7 +34,7 @@ When you have loaded the world, the next step is to run the simulation to see th
 ## Parts of the simulation
 To realize the controller that manages the crazyflie in the simulation, the following process has been carried out: 
 
-1. Search for specific documentation to know the libraries that should be added to the project to be able to perform a simple flight. These libraries have been found in the repository of the manufacturer of our drone, bitcraze. This repository provided a simple simulation in which the drone was able to clear and move through a furnished room by following the walls of the environment. For more information on this repository it is recommended to visit the following link [GitHub Bitcraze](https://github.com/bitcraze) 
+1. Search for specific documentation to know the libraries that should be added to the project to be able to perform a simple flight. These libraries have been found in the repository of the manufacturer of the Crazyflie drone, Bitcraze. This repository provided a simple simulation in which the drone was able to clear and move through a furnished room by following the walls of the environment. For more information on this repository it is recommended to visit the following link [GitHub Bitcraze](https://github.com/bitcraze).
 
 2. Once this first flight was successfully completed, the process of simulating a trajectory was started. To do this, first of all a function called ``PID_CF`` was implemented, where through the target position, the function regulates the power to be supplied to each of the drone motors. This function is a PID controller where each of the constants of the controller had to be adjusted.
 
