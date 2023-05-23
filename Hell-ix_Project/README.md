@@ -7,6 +7,8 @@ All the model information is documented in the Model Final Document that can be 
 - System Composer
 - Requirements Toolbox
 
+The project can be directly downloaded by downloading the MATLAB Archive Project file <strong><code>System_Model.mlproj</code></strong> for downloading all the files at the same time. After selecting the folder where you would like to export the model, the set-up will be automatically performed and the two main architecture files will be opened.
+
 ## Contents
 
 - **Requirements:** requirements are assigned to the different subsystems and components of the model in order to ensure design traceability. There are three requirements files:
