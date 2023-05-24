@@ -342,7 +342,6 @@ Once the program execution is completed, terminate the created terminal to avoid
 
 Next, we provide a series of tips and recommendations to follow when handling and repairing the drone and associated programs:
 
-Replacement of drone parts.
 
 <details>
   <summary>Replacement of drone parts</summary>
@@ -361,7 +360,31 @@ It is recommended to replace the included rotor in the drone with a more powerfu
   </p>
   
   <p align="center">Left: Stock rotors. Right: More powerful rotors.</p>
-  
-  
-
+    
+ 
 </details>
+
+<details>
+  <summary>Advices</summary>
+  
+  When powering on the drone, it is recommended to quickly place it on a flat surface (such as the ground or a table) until you hear a short sequence of beeps during which the propellers will briefly spin. It is not recommended to hold it in your hand during this process to avoid improper calibration.
+
+When executing the programming code, it is advisable to close any other terminals to avoid potential interference with other terminals or driver usage.  
+  
+ </details>
+
+<details>
+  <summary>Errors</summary>
+  
+  
+Finally, three common errors that may arise when using this repository are mentioned:
+
+- When using the Matlab code to create the trajectory in .csv format, an error may occur due to the default decimal separator, which can be either "," or ".". If errors occur when running the code to read the trajectory in Python, check the decimal separator in the csv file.
+
+- If the drone is hit during flight and does not turn back on, it is likely that the battery has been displaced. To fix this, disconnect the battery cable and reconnect it. If it still does not turn on, replace the battery as it may have run out of power.
+
+- If, when executing the flight code, the drone does not execute the code correctly or errors occur during execution, close the terminal using the "Kill terminal" or similar option (depending on the software used). Once this is done, run the code again.
+
+
+  
+  </details>
