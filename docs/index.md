@@ -158,11 +158,15 @@ Once the Crazyflie 2.1 box is in the team's hands, it is important to be aware o
 The box contains the following components:
   
 - 1 x Crazyflie 2.X control board with all components mounted
+- 1 x AI-deck
+- 1 x Flow-deck v2
+- 1 x LED ring
 - 5 x CW propellers
 - 5 x CCW propellers
 - 6 x Motor mounts
-- 1 x LiPo battery
-- 5 x Coreless DC motors
+- 3 x LiPo battery
+- 1 x LiPo battery charger
+- 9 x Coreless DC motors
 - 2 x Short expansion connector pins (1×10, 2mm spacing, 8 mm long)
 - 2 x Long expansion connector pins (1×10, 2mm spacing, 14 mm long)
 - 1 x Battery holder expansion board
@@ -374,7 +378,7 @@ When executing the programming code, it is advisable to close any other terminal
  </details>
 
 <details>
-  <summary>Errors</summary>
+  <summary>Troubleshooting</summary>
   
   
 Finally, three common errors that may arise when using this repository are mentioned:
