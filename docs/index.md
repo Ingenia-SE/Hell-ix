@@ -207,7 +207,7 @@ These LED indicators provide valuable information about the status of the Crazyf
 <details>
   <summary>Crazyflie Leds Images</summary>
   <p align="center"> 
-  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/CrazyflieLeds.jpeg" style="width: 700px; height: 400px;">
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/CrazyflieLeds.jpeg" style="width: 700px">
    
   </p>
   <p align="center">Crazyflie LEDs</p>
@@ -235,14 +235,14 @@ The assembly process of the Crazyflie 2.1 can typically be completed in under 10
 <details>
   <summary>Propeller Images</summary>
   <p align="center"> 
-  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/RotorBlades%26Motors.jpeg" style="width: 300px; height: 200px;">
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/RotorBlades%26Motors.jpeg" style="width: 500px">
    
   </p>
   <p align="center">Two types of motors and propellers, the transparent ones are larger and are paired with more powerful motors.</p>
   
   
   <p align="center"> 
-  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/RotorBlade.jpeg" style="width: 300px; height: 200px;">
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/RotorBlade.jpeg" style="width: 300px">
    
   </p>
   <p align="center">Standard propeller view</p>
@@ -259,14 +259,14 @@ The assembly process of the Crazyflie 2.1 can typically be completed in under 10
 <details>
   <summary>Battery Images</summary>
   <p align="center"> 
-  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/Battery.jpeg" style="width: 300px; height: 200px;">
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/Battery.jpeg" style="width: 300px">
    
   </p>
   <p align="center">Battery view</p>
   
   
   <p align="center"> 
-  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/BatteryHolderDeck.jpeg" style="width: 300px; height: 200px;">
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/BatteryHolderDeck.jpeg" style="width: 300px">
    
   </p>
   <p align="center">Battery oblicual view</p>
@@ -279,14 +279,14 @@ By meticulously following these instructions, you have successfully completed th
 <details>
   <summary>Assembled Crazyflie Images</summary>
   <p align="center"> 
-  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/AssembledCrazyflie_TopView.jpeg" style="width: 300px; height: 200px;">
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/AssembledCrazyflie_TopView.jpeg" style="width: 300px">
    
   </p>
   <p align="center">Top view</p>
   
   
   <p align="center"> 
-  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/AssembledCrazyflie_BottomView.jpeg" style="width: 300px; height: 200px;">
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/AssembledCrazyflie_BottomView.jpeg" style="width: 300px">
    
   </p>
   <p align="center">Bottom view</p>
@@ -344,11 +344,10 @@ Once the program execution is completed, terminate the created terminal to avoid
 
 ## Maintenance and Operations Manual
 
-Next, we provide a series of tips and recommendations to follow when handling and repairing the drone and associated programs:
+Next, we provide a series of tips and recommendations to follow when handling and repairing the drone and associated programs. Note that specific information about each of the implemented features about use and operation can be found in the respective folder of this repository, depending on the feature of interest.
 
 
-<details>
-  <summary>Replacement of drone parts</summary>
+### Replacement of drone parts
    
   When replacing batteries, make sure that the drone is turned off and not connected to the computer to avoid potential personal injury or damage to the device. This caution is mentioned because if the drone enters installation mode, sometimes no LED lights are visible, which can give false information about its power status.
 
@@ -366,19 +365,13 @@ It is recommended to replace the included rotor in the drone with a more powerfu
   <p align="center">Left: Stock rotors. Right: More powerful rotors.</p>
     
  
-</details>
-
-<details>
-  <summary>Advices</summary>
+### Advices
   
   When powering on the drone, it is recommended to quickly place it on a flat surface (such as the ground or a table) until you hear a short sequence of beeps during which the propellers will briefly spin. It is not recommended to hold it in your hand during this process to avoid improper calibration.
 
 When executing the programming code, it is advisable to close any other terminals to avoid potential interference with other terminals or driver usage.  
   
- </details>
-
-<details>
-  <summary>Troubleshooting</summary>
+### Troubleshooting
   
   
 Finally, three common errors that may arise when using this repository are mentioned:
@@ -388,7 +381,3 @@ Finally, three common errors that may arise when using this repository are menti
 - If the drone is hit during flight and does not turn back on, it is likely that the battery has been displaced. To fix this, disconnect the battery cable and reconnect it. If it still does not turn on, replace the battery as it may have run out of power.
 
 - If, when executing the flight code, the drone does not execute the code correctly or errors occur during execution, close the terminal using the "Kill terminal" or similar option (depending on the software used). Once this is done, run the code again.
-
-
-  
-  </details>
