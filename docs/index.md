@@ -24,7 +24,7 @@ The program consists of three files. The main program, ```trajectory_planner.m``
   </p>
   <p align="center">Trayectory planner</p>
 </details>
-
+<br>
 
 ### Computer Vision
 
