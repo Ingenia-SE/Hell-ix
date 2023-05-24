@@ -72,7 +72,7 @@ In this module, the main codes that govern the behavior of the drone are collect
 </details>
   
 ## Installation
-**Requirements:** [Python 3.8](https://www.python.org/downloads/release/python-3816/) or later. Code editor software (like [Visual Studio](https://code.visualstudio.com/download)).
+**Requirements:** [Python 3.8](https://www.python.org/downloads/release/python-3816/) or later. Code editor software (like [Visual Studio](https://code.visualstudio.com/download)). Matlab (or Octave) for creating the trajectory to be followed by the drone.
 
 Next, all the software requirements needed for using this project's files and their installation are explained.
 
@@ -319,6 +319,49 @@ Once one of the experiments is loaded, the next step is to run the simulation to
 
 ## User Guide
 
+
+To be able to use the drone's guidance codes, it is first necessary to connect it to the computer. To do this, after installing the drivers mentioned in the installation section, follow the following steps:
+
+- **Launch the CFClient**: Open the CFClient software on your computer. This will provide you with access to various control and configuration options for the Crazyflie.
+
+- **Establish Radio Connection**: Within the CFClient, locate the option to establish a radio connection. This process establishes a wireless link between the CFClient and the Crazyflie through the Crazyradio.
+
+- **Select Crazyflie Device**: After establishing the radio connection, the CFClient will display a list of available Crazyflie devices. Choose the desired Crazyflie from the list to establish a connection with that specific device.
+
+- **Configure Settings**: Once connected, you can configure various settings within the CFClient to customize the behavior and performance of the Crazyflie. These settings may include flight parameters, control mappings, and sensor calibration.
+
 After connecting the drone to the computer, it is time to send it the programmed Python code to initiate its flight.
 
+
+Firstly, it will be necessary to create the trajectory to be followed by the drone. To do this, open the file ```trajectory_planner.m``` to obtain the CSV file with the trajectory.
+
+Then, using a programming program such as Visual Studio, execute the code ```csv_follower.py``` to send the trajectory to the drone.
+Once the program execution is completed, terminate the created terminal to avoid issues in subsequent executions.
+
 ## Maintenance and Operations Manual
+
+Next, we provide a series of tips and recommendations to follow when handling and repairing the drone and associated programs:
+
+Replacement of drone parts.
+
+<details>
+  <summary>Replacement of drone parts</summary>
+   
+  When replacing batteries, make sure that the drone is turned off and not connected to the computer to avoid potential personal injury or damage to the device. This caution is mentioned because if the drone enters installation mode, sometimes no LED lights are visible, which can give false information about its power status.
+
+During the installation of propellers, it is necessary to exercise caution. Applying excessive force can damage the rotor, while installing with insufficient pressure may cause the propeller to detach during the initial flights.
+
+It is recommended to replace the included rotor in the drone with a more powerful one to better align the programmed timing with the desired outcome. The following image shows the two types of rotors:
+  
+  
+  <p align="center">
+    
+  <img src="https://github.com/Ingenia-SE/Hell-ix/blob/main/img/RotorBlades%26Motors.jpeg" width="640">
+   
+  </p>
+  
+  <p align="center">Left: Stock rotors. Right: More powerful rotors.</p>
+  
+  
+
+</details>
